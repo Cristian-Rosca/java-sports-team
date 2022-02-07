@@ -16,6 +16,17 @@ public class Main {
         int teamSpace = teamService.countEmptySpacesOnTeam(teamA);
 
         System.out.println(teamSpace);
+
+        try {
+            teamService.addPlayerToTeam(teamA, player);
+        }
+        catch (Exception e) {
+            System.out.println("team is full");
+        }
+
+        int teamSpaceAfter = teamService.countEmptySpacesOnTeam(teamA);
+        System.out.println(teamSpaceAfter);
     }
+
 
 }

@@ -19,7 +19,7 @@ public class TeamService {
 //                count++;
 //            }
 
-        // fori method - this looping method has more control 
+        // fori method - this looping method has more control
         Player [] players = team.getPlayers(); // this one is more useful if we start from end of array, if we want to stop halfway, if we want to increment by 2 and so on
         int count = 0;
         for (int i = 0; i < players.length; i++) {
@@ -28,6 +28,21 @@ public class TeamService {
             }
         }
         return count;
+    }
+
+    public void addPlayerToTeam (Team team, Player player) throws Exception { // include "throws exception" in first line
+        // Check if there is space on the team
+        int space = countEmptySpacesOnTeam(team);
+        // If there is a space, add the player
+        if (space > 0) {
+            for (int i = 0; i < team.getPlayers().length; i++) {
+                if (team.getPlayers()[i] == null) {
+                    team.getPlayers() [i] = player;
+                    break;
+                }
+            }
+        }
+        else throw new Exception();
     }
 
 }
