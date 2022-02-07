@@ -1,0 +1,13 @@
+package service;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class TeamServiceTest {
+
+    // Given
+
+    // When
+
+    // Then
+
+}

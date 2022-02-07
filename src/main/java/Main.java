@@ -21,6 +21,7 @@ public class Main {
             teamService.addPlayerToTeam(teamA, player);
         }
         catch (Exception e) {
+            System.out.println(e.getMessage());
             System.out.println("team is full");
         }
 
