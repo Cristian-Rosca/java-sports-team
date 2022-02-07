@@ -1,3 +1,5 @@
+package pojo;
+
 public class Player {
 
     // Properties
@@ -58,7 +60,7 @@ public class Player {
 
     @Override
     public String toString() {
-        return "Player{" +
+        return "pojo.Player{" +
                 "name='" + name + '\'' +
                 ", position='" + position + '\'' +
                 ", number=" + number +
