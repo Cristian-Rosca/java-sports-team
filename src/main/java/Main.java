@@ -1,6 +1,7 @@
 import pojo.Manager;
 import pojo.Player;
 import pojo.Team;
+import service.TeamService;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,6 +10,12 @@ public class Main {
         Manager manager = new Manager ("Carlos Wynne");
 
         Team teamA = new Team("TeamA", manager);
+
+        TeamService teamService = new TeamService();
+
+        int teamSpace = teamService.countEmptySpacesOnTeam(teamA);
+
+        System.out.println(teamSpace);
     }
 
 }
